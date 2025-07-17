@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Michaels - Personal Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark background */
+            color: #d1d5db; /* Light gray text */
+        }
+        .section-title {
+            @apply text-3xl font-bold text-white mb-8 border-b-2 border-cyan-500 pb-2;
+        }
+        .card {
+            @apply bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105;
+        }
+        .nav-link {
+            @apply text-gray-300 hover:text-cyan-400 transition-colors duration-300;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-white">Jackson Michaels</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#publications" class="nav-link">Publications</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#recommendations" class="nav-link">Recommendations</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                 <a href="#about" class="block py-2 px-4 text-sm nav-link">About</a>
+                 <a href="#experience" class="block py-2 px-4 text-sm nav-link">Experience</a>
+                 <a href="#publications" class="block py-2 px-4 text-sm nav-link">Publications</a>
+                 <a href="#education" class="block py-2 px-4 text-sm nav-link">Education</a>
+                 <a href="#recommendations" class="block py-2 px-4 text-sm nav-link">Recommendations</a>
+                 <a href="#projects" class="block py-2 px-4 text-sm nav-link">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- About Section -->
+        <section id="about" class="py-16">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3 text-center">
+                    <img src="https://placehold.co/400x400/1f2937/d1d5db?text=Jackson+Michaels" 
+                         alt="Jackson Michaels Profile Picture" 
+                         class="rounded-full w-64 h-64 mx-auto shadow-lg border-4 border-gray-700">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-4xl font-bold text-white mb-2">Jackson Michaels</h2>
+                    <p class="text-xl text-cyan-400 mb-4">Machine Learning & Multi-Modal Fusion Researcher | 1st Year PhD Student at The University of Massachusetts</p>
+                    <p class="mb-4">
+                        I graduated with a B.S. in Computer Science and Innovation at Champlain College with triple minors in Mathematics, Game Programming, and Data Science. I have worked with Bosch in Pittsburgh on computer vision tasks. I graduated with my MS in Computer Science from Northwestern University in 2023 and have been working on independent research and work with the Bio Inspired Vision Lab at Northwestern University.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300" aria-label="LinkedIn Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300" aria-label="GitHub Profile">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                        </a>
+                        <a href="#" class="text-cyan-400 hover:text-cyan-300" aria-label="Google Scholar Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.249 14.978 9 12 9s-5.548 2.249-6.758 4.769zM12 10c-1.654 0-3 1.346-3 3s1.346 3 3 3s3-1.346 3-3s-1.346-3-3-3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="relative border-l-2 border-gray-700 ml-4">
+                <!-- Experience Item -->
+                <div class="mb-10 ml-8">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-500 rounded-full -left-4 ring-8 ring-gray-900"><svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg></span>
+                    <h3 class="text-xl font-semibold text-white">PhD Student</h3>
+                    <p class="text-md font-medium text-gray-400">University of Massachusetts Amherst</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-500">Sep 2023 - Present</time>
+                </div>
+                <!-- Experience Item -->
+                <div class="mb-10 ml-8">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-500 rounded-full -left-4 ring-8 ring-gray-900"><svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg></span>
+                    <h3 class="text-xl font-semibold text-white">Research Intern</h3>
+                    <p class="text-md font-medium text-gray-400">Northwestern University</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-500">Jul 2023 - Dec 2024</time>
+                    <p>Computer vision research for Bio-inspired Vision Lab at Northwestern working with Biologists on spider eye analysis.</p>
+                </div>
+                 <!-- Experience Item -->
+                <div class="mb-10 ml-8">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-500 rounded-full -left-4 ring-8 ring-gray-900"><svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg></span>
+                    <h3 class="text-xl font-semibold text-white">Software Developer (Internship)</h3>
+                    <p class="text-md font-medium text-gray-400">Bosch</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-500">May 2020 - May 2021</time>
+                </div>
+                <!-- Experience Item -->
+                <div class="mb-10 ml-8">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-500 rounded-full -left-4 ring-8 ring-gray-900"><svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg></span>
+                    <h3 class="text-xl font-semibold text-white">Media Services</h3>
+                    <p class="text-md font-medium text-gray-400">Champlain College</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-500">Sep 2016 - May 2020</time>
+                    <p>Set up and operated audiovisual equipment for on and off-campus events, provided onsite support for classroom AV systems, and interfaced with clients to deliver their needs.</p>
+                </div>
+                <!-- Experience Item -->
+                <div class="ml-8">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-cyan-500 rounded-full -left-4 ring-8 ring-gray-900"><svg class="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg></span>
+                    <h3 class="text-xl font-semibold text-white">IoT Software and Building Information Model Programmer</h3>
+                    <p class="text-md font-medium text-gray-400">Bosch</p>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-500">May 2019 - Aug 2019</time>
+                    <p>Created an Android application for tracking interactions of people and building elements throughout a building.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications & Presentations Section -->
+        <section id="publications" class="py-16">
+            <h2 class="section-title">Publications & Presentations</h2>
+            <div class="space-y-8">
+                <!-- Publication Item 1 -->
+                <div class="bg-gray-800/50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-white">Adapting Latent Diffusion Models from Image to Class-Conditioned Audio Generation</h3>
+                    <p class="text-sm text-gray-400 mt-1">J. Michaels</p>
+                    <p class="mt-2 italic">Master's Thesis, Northwestern University, 2023</p>
+                    <p class="mt-2">Program focus was primarily in machine learning and artificial intelligence with a lesser focus on computer vision.</p>
+                    <a href="#" class="text-cyan-500 hover:underline mt-2 inline-block">PDF (Placeholder)</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="py-16">
+            <h2 class="section-title">Education</h2>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-white">Doctor of Philosophy - PhD, Computer Science</h3>
+                    <p class="text-gray-400">University of Massachusetts Amherst | Sep 2023 - Present</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white">Master of Science - MS, Computer Science</h3>
+                    <p class="text-gray-400">Northwestern University | Aug 2021 - Mar 2023</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white">Bachelor of Science - BS, Computer Science and Innovation</h3>
+                    <p class="text-gray-400">Champlain College</p>
+                    <p class="text-sm text-gray-500">Minors: Mathematics, Game Programming, Data Science</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="py-16">
+            <h2 class="section-title">Recommendations</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800/50 p-6 rounded-lg">
+                    <blockquote class="border-l-4 border-cyan-500 pl-4">
+                        <p class="italic">"Jackson was a great intern at Bosch. He has excellent technical skills and was able to quickly absorb and learn new technologies... Jackson exceeded our expectations... I recommend him for any software development and/or 3D programming environment work without exception."</p>
+                    </blockquote>
+                    <p class="text-right mt-4 font-semibold text-white">- Charles Shelton</p>
+                    <p class="text-right text-sm text-gray-400">Lead Research Scientist at Bosch Research</p>
+                </div>
+                <div class="bg-gray-800/50 p-6 rounded-lg">
+                    <blockquote class="border-l-4 border-cyan-500 pl-4">
+                        <p class="italic">"I've always appreciated Jackson's innate technical curiosity... Jackson is a strong communicator. He also has an eye for design and detail... I can say without a doubt that he will be an asset to any organization that he joins."</p>
+                    </blockquote>
+                    <p class="text-right mt-4 font-semibold text-white">- David Kopec</p>
+                    <p class="text-right text-sm text-gray-400">Associate Professor of Computer Science</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Misc Projects Section -->
+        <section id="projects" class="py-16">
+            <h2 class="section-title">Misc Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=CV+Project" alt="Project Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Spider Eye Analysis Tool</h3>
+                        <p class="text-sm mb-4">A computer vision tool developed to assist biologists in analyzing spider eye morphology, based on work with the Bio Inspired Vision Lab.</p>
+                        <a href="#" class="text-cyan-500 hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Audio+Gen" alt="Project Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Latent Diffusion for Audio</h3>
+                        <p class="text-sm mb-4">An exploration of adapting latent diffusion models, typically used for images, to generate class-conditioned audio samples.</p>
+                        <a href="#" class="text-cyan-500 hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/1f2937/d1d5db?text=IoT+Tracker" alt="Project Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-2">Building Interaction Tracker</h3>
+                        <p class="text-sm mb-4">An Android application for tracking interactions between people and building elements using IoT principles.</p>
+                        <a href="#" class="text-cyan-500 hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 Jackson Michaels. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
